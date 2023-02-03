@@ -14,7 +14,8 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+    background-image: linear-gradient(to bottom, #ff0303, #c20024, #820527, #42101d, #000000);
 }
 
 .grid {
@@ -68,3 +69,26 @@ body {
         left: 0;
         width: 200px;
     }
+
+.titulo {
+    font-weight: 900;
+    font-size: 3.25em;
+    margin-bottom: 30px;
+    text-shadow: 2px 3px 0px #898999;
+    line-height: 1.2;
+    color: white;
+}
+
+.subtitulo {
+    font-weight: 900;
+    font-size: 25px;
+    margin-bottom: 30px;
+    text-shadow: 2px 3px 0px #898999;
+    line-height: 1.2;
+    color: white;
+}
+
+.btn-color {
+    color: #fff;
+    border-color: #fff;
+}

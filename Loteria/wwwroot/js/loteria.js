@@ -140,7 +140,7 @@ function ActualizarTablas() {
 
     tablas.forEach((element, index) => {
         contenidoTablas = contenidoTablas + `<div class="col-md-4">`;
-        contenidoTablas = contenidoTablas + `<h3>Tabla: ${element.nombre}</h3>`;
+        contenidoTablas = contenidoTablas + `<h3 class="subtitulo">Tabla: ${element.nombre}</h3>`;
         contenidoTablas = contenidoTablas + `<div class="grid">`;
         element.cartas.forEach(element => {
             let marcado = element.marcado == 1 ? `<img src="img/check.png" class="marcado" alt="check">` : "";
