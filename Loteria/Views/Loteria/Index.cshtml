@@ -1,0 +1,40 @@
+﻿<section class="section">
+    <div class="container">
+        <h1 class="text-center">Loteria</h1>
+        <div>
+            <button type="button" id="RevolverCartas" onclick="CambiarOrdenCartas()" class="btn btn-outline-primary">Desordenar cartas</button>
+            <button type="button" id="MostrarOcultarCartas" onclick="OcultarMostrarCartas()" class="btn btn-outline-primary">Ocultar Tarjetas Seleccionadas</button>
+            <a asp-area="" asp-controller="Loteria" asp-action="Index" class="btn btn-outline-primary">Reiniciar Juego</a>
+        </div>
+        <hr />  
+        <div id="cartas">
+        </div>
+        <hr />
+        <div id="tablas" class="row"></div>
+    </div>
+</section>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="ganadores" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="ganadoresLabel">Ganadores</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="tablasGanadoras" class="row"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script src="~/js/clases.js"></script>
+    <script src="~/js/loteria.js"></script>
+}

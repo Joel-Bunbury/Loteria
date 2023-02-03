@@ -1,0 +1,49 @@
+﻿@model List<Datos.Models.Ganador>
+
+<h1>Registro de tablas ganadoras</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Registro
+            </th>
+            <th>
+                Fecha
+            </th>
+            <th>
+                Tabla
+            </th>
+            <th>
+                Juego
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ganador in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(m => ganador.GanadorID)
+                </td>
+                <td>
+                    @Html.DisplayFor(m => ganador.FechaHora)
+                </td>
+                <td>
+                    @Html.DisplayFor(m => ganador.Tabla.Nombre)
+                </td>
+                <td style="width: 15%;">
+                    <div class="grid">
+                        @foreach (var carta in ganador.Tabla.Cartas)
+                        {
+                        <div style="position:relative">
+                            <img src="@carta.Imagen" class="card-img-top" alt="El gallo">
+                            <img src="img/check.png" class="marcado" alt="check">
+                        </div>
+                        }
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
